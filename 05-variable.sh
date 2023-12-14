@@ -2,13 +2,13 @@
 
 echo "Enter your username"
 
-read USERNAME #The value enter above will be automaticllay fetched by the USERNAME variable
+read -s USERNAME #The value enter above will be automaticllay fetched by the USERNAME variable
 
 echo "Enter your password" 
 
-read PASSWORD #The value enter above will be automaticllay fetched by the PASSWORD variable
+read -s PASSWORD #The value enter above will be automaticllay fetched by the PASSWORD variable
 
-echo "Your username is $USERNAME, and Your password is $PASSWORD"
+echo "Your username is $USERNAME, and password is $PASSWORD"
 
 
 
