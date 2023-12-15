@@ -1,12 +1,11 @@
 #!/bin/bash
 
-ID=$(id -u)
+ID=@(id -u)
 
 if [ $ID -ne 0 ]
-    then
-        echo "Error: You are not a root user, please connect as a root user
-               use the command: sudo su - to change to root user"
-    else
+    then    
+        echo "Error: Please connect as Root uesr to install mysql"
+    else    
         echo "You are a root user"
 fi
 
