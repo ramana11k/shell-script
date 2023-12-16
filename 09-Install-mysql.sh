@@ -2,6 +2,16 @@
 
 ID=$(id -u)
 
+VALIDATE() {
+if [ $? -ne 0 ]
+    then 
+        echo "Error: MySql is not installed"
+        exit 1
+    else
+        echo "Mysql is installed successfully"
+fi
+}
+
 if [ $ID -ne 0 ]
     then    
         echo "Error: Please connect as Root uesr to install mysql"
@@ -12,10 +22,8 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
-    then 
-        echo "Error: MySql is not installed"
-        exit 1
-    else
-        echo "Mysql is installed successfully"
-fi
+VALIDATE
+
+yum install git -y
+
+VALIDATE
