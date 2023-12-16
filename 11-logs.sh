@@ -4,21 +4,27 @@ ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+
 LOGFILE="/tmp/$0-$TIMESTAMP.logfile"
 
 VALIDATE() {
 if [ $1 -ne 0 ]
     then 
-        echo "Error: $2 ...FAILED"
+        echo -e "Error: $2 ...$R FAILED $N"
         exit 1
     else
-        echo "$2 ...SUCCESS"
+        echo -e "$2 ...$G SUCCESS $N"
 fi
 }
 
 if [ $ID -ne 0 ]
     then 
-        echo "Error: you are not a root user"
+        echo -e "$R Error: you are not a root user $N"
         exit 1
     else
         echo "You are a root user"
