@@ -19,3 +19,11 @@ yum install mysql -y
         else    
             echo "Mysql is installed successfully"
     fi
+
+yum install mysql -y
+
+VALIDATE
+
+yum install git -y
+
+VALIDATE
