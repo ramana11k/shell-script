@@ -2,10 +2,10 @@
 
 echo "Enter your user name"
 
-read UN
+read -u UN
 
 echo "Enter your password"
 
-read PW
+read -u PW
 
 echo "Your username is '$UN' and password is '$PW'"
