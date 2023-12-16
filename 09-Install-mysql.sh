@@ -15,6 +15,7 @@ yum install mysqssl -y
 if [ $? -ne 0 ]
     then 
         echo "Error: MySql is not installed"
+        exit 1
     else
         echo "Mysql is installed successfully"
 fi
