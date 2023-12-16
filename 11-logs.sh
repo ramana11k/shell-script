@@ -9,7 +9,6 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-
 LOGFILE="/tmp/$0-$TIMESTAMP.logfile"
 
 VALIDATE() {
@@ -30,7 +29,7 @@ if [ $ID -ne 0 ]
         echo "You are a root user"
 fi
 
-yum install mysql -y &>> $LOGFILE
+yum install mysqlll -y &>> $LOGFILE
 
 VALIDATE $? "MySQL installation"
 
