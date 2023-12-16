@@ -10,7 +10,7 @@ if [ $ID -ne 0 ]
         echo "You are root user and installation starts now..."
 fi
 
-yum install mysqlll -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
     then 
