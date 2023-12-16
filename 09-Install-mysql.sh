@@ -10,4 +10,11 @@ if [ $ID -ne 0 ]
         echo "You are a root user"
 fi
 
-yum install mysql -y
+yum install mysqssl -y
+
+if [ $? -ne 0 ]
+    then 
+        echo "Error: MySql is not installed"
+    else
+        echo "Mysql is installed successfully"
+fi
