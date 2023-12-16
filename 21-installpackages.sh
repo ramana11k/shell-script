@@ -2,6 +2,16 @@
 
 ID=$(id -u)
 
+VALIDATE() {
+if [ $? -ne 0 ]
+    then 
+        echo "Error: installation has failed"
+        exit 1
+    else   
+        echo "MySQL has installed successfully"
+fi
+}
+
 if [ $ID -ne 0 ]
     then    
         echo "Error: you are not root user"
@@ -12,10 +22,8 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
-    then 
-        echo "Error: installation has failed"
-        exit 1
-    else   
-        echo "MySQL has installed successfully"
-fi
+VALIDATE
+
+yum install mysql -y
+
+VALIDATE
