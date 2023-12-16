@@ -8,4 +8,4 @@ echo "Enter your password"
 
 read PW
 
-echo "Your username is $UN and password is $PW"
+echo "Your username is '$UN' and password is '$PW'"
